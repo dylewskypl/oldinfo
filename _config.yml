@@ -35,8 +35,7 @@ plugins:
   - github-pages
   - jekyll-remote-theme
 
-theme: jekyll-theme-minima
-remote_theme: minima
+remote_theme: jekyll/minima
 
 # Exclude from processing.
 # The following items will not be processed, by default.
