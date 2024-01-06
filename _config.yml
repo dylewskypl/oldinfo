@@ -17,7 +17,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-
+theme: minima
 title: Oldinfo
 email: dylewsky@hudsar.gdn
 description: >- # this means to ignore newlines until "baseurl:"
@@ -26,11 +26,10 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  dylewskypl
 
 # Build settings
-theme: minima
-plugins:
-  - github-pages
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
