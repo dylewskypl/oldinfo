@@ -15,16 +15,18 @@ layout: default
   <ul class="post-list">
     {%- for post in site.data.1.items. -%}
     <li>
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <span class="post-meta">{{ post.date | date: date_format }}</span>
+      <span class="post-meta">
+        <script>
+          document.write(new Date({{ post.published }}))
+        </script>
+      </span>
       <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
+        <a class="post-link" href="{{ post.canonicalUrl }}">
           {{ post.title | escape }}
         </a>
+        <img src="{{ post.visual.url }}" />
       </h3>
-      {%- if site.show_excerpts -%}
-      {{ post.excerpt }}
-      {%- endif -%}
+      {{ post.summary.content }}
     </li>
     {%- endfor -%}
 
