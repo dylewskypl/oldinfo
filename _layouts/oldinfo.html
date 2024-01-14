@@ -17,14 +17,14 @@ layout: default
     <li>
       <span class="post-meta">
         <script>
-          document.write(new Date({{ post.published }}))
+          documenet.write(new Date({{ post.published }}))
         </script>
       </span>
       <h3>
         <a class="post-link" href="{{ post.canonicalUrl }}">
           {{ post.title | escape }}
+          <img src="{{ post.visual.url }}" />
         </a>
-        <img src="{{ post.visual.url }}" />
       </h3>
       {{ post.summary.content }}
     </li>
