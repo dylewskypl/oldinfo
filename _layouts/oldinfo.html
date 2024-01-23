@@ -9,28 +9,12 @@ layout: default
 
   {{ content }}
 
-  {%- if site.data.1.size > 0 -%}
-  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-  <h1>Articles:</h1>
-  <ul class="post-list">
-    {%- for post in site.data.1.items. -%}
-    <li>
-      <span class="post-meta">
-        <script>
-          documenet.write(new Date({{ post.published }}))
-        </script>
-      </span>
-      <h3>
-        <a class="post-link" href="{{ post.canonicalUrl }}">
-          {{ post.title | escape }}
-          <img src="{{ post.visual.url }}" />
-        </a>
-      </h3>
-      {{ post.summary.content }}
-    </li>
-    {%- endfor -%}
+  {%- for page in site.pages -%}
 
-  </ul>
-  {%- endif -%}
+  {%- if page.dir == "/info/" -%}
+
+  <a href="./{{ page.url }}">{{page.name}}</a><br />
+  {%-endif -%}
+  {%- endfor -%}
 
 </div>
